@@ -34,7 +34,7 @@ export const Card = ({nombre, theid}) =>{
             <h5 className="card-title">{nombre}</h5>
             <p className="card-text"></p>
             <div className="d-flex justify-content-between">
-                <Link to={"/single/"+theid}>
+                <Link to={`singleme/character/${theid}`}>
                 <div className="p-0 bd-highlight">
                 <span href="#" className="btn btn-primary">Learn More</span>
                 </div>

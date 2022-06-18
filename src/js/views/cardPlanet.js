@@ -18,14 +18,14 @@ export const CardPlanet = () =>{
     return (
 	<div className="d-flex w-100 overflow-auto">
         {store.planets.map((item)=>{return(
-        <div className="m-3" key={item.uid}>
+        <div className="m-3" key={props.theid}>
 		<div className="card" style={{width: "18rem"}}>
         <img src="https://picsum.photos/id/870/400/200?grayscale&blur=2" className="card-img-top" alt="..." />
         <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
             <p className="card-text">Poblacion: {item.population}<br></br>Período Orbital: {item.orbital_period}</p>
             <div className="d-flex justify-content-between">
-                <Link to="/single">
+                <Link to={`singleme/planet/${theid}`}>
                 <div className="p-0 bd-highlight">
                 <span href="#" className="btn btn-primary">Learn More</span>
                 </div>
