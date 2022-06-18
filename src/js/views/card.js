@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 
 
 
-export const Card = ({nombre, theid}) =>{ 
+export const Card = ({nombre, theid, route}) =>{ 
     const {actions}=useContext(Context);
     const [heart,setHeart] = useState(<i className="fa-regular fa-heart"></i>)
     const [color, setColor] = useState("btn btn-outline-warning");
@@ -34,7 +34,7 @@ export const Card = ({nombre, theid}) =>{
             <h5 className="card-title">{nombre}</h5>
             <p className="card-text"></p>
             <div className="d-flex justify-content-between">
-                <Link to={`singleme/character/${theid}`}>
+                <Link to={`singleme/${route}/${theid}`}>
                 <div className="p-0 bd-highlight">
                 <span href="#" className="btn btn-primary">Learn More</span>
                 </div>
